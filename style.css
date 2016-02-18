@@ -1,0 +1,372 @@
+/* reset */
+* {
+    margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* html5 tags */
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section, main {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+/* Custom */
+html, body {
+    font: 15px "Helvetica", "Tahoma", sans-serif;
+    background: #fff;
+}
+.line {
+    max-width: 900px;
+    padding: 0 20px;
+    margin: 0 auto;
+}
+.line:before,
+.line:after {
+    content: '';
+    display: block;;
+    clear: both;
+}
+.w50 {
+    float: left;
+    width: 50%;
+}
+.r {
+    float: right;
+}
+
+/* button */
+.bt,
+button {
+    position: relative;
+    display: inline-block;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    background: #666;
+    padding: 0 10px;
+    color: #fff;
+    height: 26px;
+    outline: none;
+    line-height: 25px;
+    min-width: 13px;
+    font-size: 12px;
+    border: none;
+    border-radius: 2px;
+    margin: 0 2px;
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 2px 2px rgba(0,0,0,.2);
+}
+.bt:active,
+button:active {
+    box-shadow: inset 0 2px 4px rgba(0,0,0,.4)
+}
+.bt-blue {
+    background: #0271c7;
+}
+.bt-blue:active {
+    background: #1b5aa5;
+}
+.bt-icon {
+    padding: 0 7px;
+    margin: 0;
+    background: transparent;
+    box-shadow: none;
+}
+.bt-icon img {
+    display: block;
+    margin-top: 0px;
+}
+.bt-ctrl {
+    background: #fff;
+    height: 17px;
+    color: #555;
+    font-size: 11px;
+    padding: 1px 8px 3px;
+    line-height: 15px;
+    border-radius: 4px;
+    text-shadow: none;
+    box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.3);
+}
+.bt-ctrl:active {
+    box-shadow: inset 0 1px 5px rgba(0, 0, 0, 0.5);
+}
+.bt-ctrl img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin: -3px 0 0 -1px;
+}
+/* input */
+textarea,
+input {
+    display: inline-block;
+    padding: 0 8px;
+    margin: 0;
+    height: 26px;
+    line-height: 20px;
+    color: #222;
+    font-size: 12px;
+    border: 1px solid #ccc;
+    border-radius: 2px;
+    outline: none;
+    box-sizing: border-box;
+    box-shadow: inset 0 1px 1px rgba(0,0,0,.2);
+}
+textarea {
+    height: auto;
+    line-height: 18px;
+}
+textarea:focus,
+input:focus {
+    border: 1px solid #c0c0c0;
+}
+
+.top {
+    background: #f4f4f4;
+    padding: 55px 0 20px;
+    box-shadow: 0 3px 3px rgba(0,0,0,.15)
+}
+.search-box input {
+    width: 200px;
+    white-space: nowrap;
+}
+main {
+    padding: 15px 0 65px;
+}
+.cl-top {
+    padding: 0 0 13px;
+}
+.month-title {
+    vertical-align: middle;
+    height: 25px;
+    margin: 0 3px;
+    line-height: 25px;
+    padding-top: 3px;
+    font-size: 16px;
+}
+.cl-body {
+    position: relative;
+}
+.cl-body .cl-table {
+    border-radius: 2px;
+}
+.cl-body .cl-table table {
+    width: 100%;
+    border-radius: 2px;
+    border-top: 1px solid #ebebeb;
+    border-left: 1px solid #ebebeb;
+}
+.cl-body .cl-table table tr td {
+    border-bottom: 1px solid #ebebeb;
+    border-right: 1px solid #ebebeb;
+    position: relative;
+    font-size: 11px;
+    color: #888;
+    padding: 8px;
+    box-sizing: border-box;
+    width: 127px;
+    height: 127px;
+    cursor: pointer;
+}
+.cl-body .cl-table table tr td.grey {
+    background: #f4f4f4;
+}
+.cl-body .cl-table table tr td.grey span {
+    font-weight: bold;
+}
+.cl-body .cl-table table tr td.blue {
+    background: #c2e4fe;
+}
+.cl-body .cl-table table tr td.new {
+    background: #e6f1f9;
+    border: none;
+    box-shadow: inset 0 0 0 2px #8cc7fe ;
+}
+.cl-body .cl-table table tr td .weekday {
+    display: inline-block;
+    margin-right: 5px;
+    max-width: 0%;
+    overflow: hidden;
+    transition: max-width .45s;
+}
+.cl-body .cl-table table tr:first-child td .weekday,
+.cl-body .cl-table table tr td.new .weekday {
+    max-width: 100%;
+}
+.cl-body .cl-table table tr td .day {
+    display: inline-block;
+    overflow: hidden;
+    margin-left: -5px;
+    transition: margin-left .3s;
+}
+.cl-body .cl-table table tr:first-child td .day,
+.cl-body .cl-table table tr td.new .day {
+    margin-left: 0px;
+}
+.cl-body .cl-table table tr td .content {
+    padding-top: 4px;
+    cursor: text;
+}
+.cl-body .cl-table table tr td .content .event {
+    padding-bottom: 3px;
+    font-size: 12px;
+    font-weight: bold;
+    color: #666;
+}
+.cl-body .cl-table table tr td .content .member {
+    font-size: 12px;
+    color: #666;
+}
+#modal {
+    position: absolute;
+    display: none;
+    top: 0;
+    left: 0;
+    width: 300px;
+    height: 330px;
+    padding: 23px;
+    background: #fff;
+    z-index: 300;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    box-shadow: 0 2px 15px rgba(0,0,0,.3);
+    border-radius: 3px;
+    transition: all .3s;
+}
+#modal-close {
+    display: block;
+    height: 13px;
+    width: 10px;
+    font-size: 16px;
+    line-height: 10px;
+    color: #666;
+    background: #fff;
+    position: absolute;
+    margin: 0;
+    right: 8px;
+    top: 10px;
+    padding: 2px 0;
+    text-shadow: none;
+    box-shadow: none;
+    cursor: pointer;
+}
+#modal .modal-tria {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 0;
+    display: block;
+}
+#modal .modal-tria:before,
+#modal .modal-tria:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    margin: 23px 0 0 -10px;
+    border: 11px solid transparent;
+    border-right: 10px solid #c5c5c5;
+    border-left: none;
+    z-index: 5;
+}
+#modal .modal-tria:after {
+    margin-left: -9px;
+    border-right: 10px solid #fff;
+    z-index: 8;
+}
+#modal.bl .modal-tria {
+    top: auto;
+    bottom: 0;
+}
+#modal.bl .modal-tria:before,
+#modal.bl .modal-tria:after {
+    top: auto;
+    bottom: 0;
+    margin: 0 0 23px -10px;
+}
+#modal.bl .modal-tria:after {
+    margin-left: -9px;
+}
+#modal.tr .modal-tria {
+    left: auto;
+    right: 0;
+}
+#modal.tr .modal-tria:before,
+#modal.tr .modal-tria:after {
+    left: auto;
+    right: 0;
+    margin: 23px -10px 0 0;
+    border-left: 10px solid #c5c5c5;
+    border-right: none;
+}
+#modal.tr .modal-tria:after {
+    margin-right: -9px;
+    border-left: 10px solid #fff;
+    border-right: none;
+}
+#modal.br .modal-tria {
+    left: auto;
+    top: auto;
+    right: 0;
+    bottom: 0;
+}
+#modal.br .modal-tria:before,
+#modal.br .modal-tria:after {
+    left: auto;
+    top: auto;
+    bottom: 0;
+    right: 0;
+    margin: 0 -10px 23px 0;
+    border-left: 10px solid #c5c5c5;
+    border-right: none;
+}
+#modal.br .modal-tria:after {
+    margin-right: -9px;
+    border-left: 10px solid #fff;
+    border-right: none;
+}
+#modal input,
+#modal textarea {
+    margin: 3px 0 4px;
+    padding: 5px 6px;
+    width: 100%;
+    max-width: 100%;
+    min-width: 100%;
+    box-sizing: border-box;
+}
+#modal textarea {
+    padding: 5px 7px;
+    margin-top: 30px;
+    max-height: 118px;
+    min-height: 118px;
+}
+#modal .options {
+    margin-top: 11px;
+}
+#modal .options button {
+    border: 1px solid #a6a6a6;
+    background: #fff;
+    height: 21px;
+    margin-right: 10px;
+    line-height: 20px;
+    color: #333;
+    text-shadow: none;
+    border-radius: 4px;
+    box-shadow: 0 1px 1px #eee, inset 0 -3px 5px #eee;
+}
+#modal .options button:active {
+    box-shadow: 0 1px 1px #eee, inset 0 2px 2px #ddd;
+}

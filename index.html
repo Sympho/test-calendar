@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="icon" href="https://lh3.googleusercontent.com/-70-4gLT2gfM/URrqKilJDJI/AAAAAAAAB-c/qMpI8TVQOgQ/s168/calendar_2012.png" type='image/png'>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="top">
+        <div class="line">
+            <div class="w50">
+                <div class="options-box">
+                    <button class="bt-blue" id="ctrl-quick">Добавить</button>
+                    <button class="bt-blue" id="ctrl-refresh">Обновить</button>
+                </div>
+            </div>
+            <div class="w50">
+                <div class="search-box r">
+                    <form action="" method="post" id="ctrl-search">
+                    <button class="bt bt-icon"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA0AAAANCAYAAABy6+R8AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAQdJREFUeNqM0q1PQlEcxvHLHUVNjs3NZjRooFnkD4DAFMdMFpOBMSKDSQAGWdjdDAbnyyzqdFosJIkQLDYjzWDAl6B8f9tztyPe4LN9ds/L/Z177tmJBUHgKZvYRVL9AY5w7U3F17OOS6SRkAyu0IgqyqGKD5SxLNb+RAUb00V7atfQxotYe19zBcTcohW849T7m3OMsYp5t8hW+JGohOO/vvSMWWxHFGxhDkO8hoNxHCKFJr5wq7msxix37k7sSxc4wAy6eJKOdmApYc0t+kYRO3hU3/TQwhuWcIP1cHthTmRR/ZGettAZFnQ78n7Ez4+cAsu9vaiDsJty7Hv/y4NO0k66PxFgANxgOXmvXNQnAAAAAElFTkSuQmCC" alt="search"></button>
+                    <input type="text" placeholder="Событие, дата или участник">
+                    </form>
+                </div>
+            </div>
+        </div>
+    </header>
+    <main>
+        <div class="line">
+            <div class="calendar-box">
+                <div class="cl-top">
+                    <button class="bt-ctrl" id="ctrl-prevmonth">
+                        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAMAAAAFCAYAAACAcVaiAAAAHklEQVQIW2NkQID/jFD2fxAN4oAZMA6IhsvAJP4DAJdtBQFMSDeDAAAAAElFTkSuQmCC" alt="left">
+                    </button>
+                    <span class="month-title" id="ctrl-titlemonth"></span>
+                    <button class="bt-ctrl" id="ctrl-nextmonth">
+                        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAMAAAAFCAYAAACAcVaiAAAAIElEQVQIW2NkYGD4z8DAwMgAJUAcMBskAuOApTFkwHoAr8kFBbzEUsAAAAAASUVORK5CYII=" alt="left">
+                    </button>
+                    <button class="bt-ctrl" id="ctrl-currmonth">Сегодня</button>
+                </div>
+                <div class="cl-body">
+                    <div class="cl-table" id="container">
+                    </div>
+                    <div id="modal">
+                        <div class="body">
+                            <p><input type="text" name="event-title" placeholder="Событие" ></p>
+                            <p><input type="text" name="event-date" placeholder="День, месяц, год" ></p>
+                            <p><input type="text" name="event-members" placeholder="Имен участников" ></p>
+                            <p><textarea name="event-descr" id="" cols="30" rows="10"></textarea></p>
+                            <p class="options"><button id="event-save">Готово</button><button id="event-remove">Удалить</button></p>
+                        </div>
+                        <span class="modal-tria"></span>
+                        <button id="modal-close" >&times;</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <script src="e.js"></script>
+    <script>
+            var cal = calendar('#container');
+            var modal = new Modal('#modal',function(){cal.refresh()});
+    </script>
+</body>
+</html>
